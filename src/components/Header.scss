@@ -1,0 +1,11 @@
+.user-avatar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+
+    .fa {
+        font-size: 32px;
+        color: grey;
+    }
+}
