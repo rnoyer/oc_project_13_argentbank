@@ -181,6 +181,11 @@ paths:
           description: Attach Bearer JWT token
           type: string
           required: true
+        - in: path
+          type: integer
+          name: transactionId
+          required: true
+          description: The transaction ID
         - in: body
           name: body
           description: Update transaction attributes
