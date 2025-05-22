@@ -7,10 +7,10 @@ export const loginSlice = createSlice({
   },
   reducers: {
     setToken: (state, action) => {
-      state.value.token = action.payload;
+      state.token = action.payload;
     },
     unsetToken: (state) => {
-      state.value.token = undefined;
+      state.token = undefined;
     },
   },
 });
@@ -21,6 +21,6 @@ export const setTokenInAsync = (hash) => (dispatch) => {
   dispatch(setToken(hash));
 };
 
-export const userToken = (state) => state.logger.value;
+export const userToken = (state) => state.login.value;
 
 export default loginSlice.reducer;

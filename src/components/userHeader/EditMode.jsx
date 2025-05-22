@@ -9,7 +9,7 @@ export default function EditMode({ isEdited, setIsEdited }) {
 
   const [newFirstName, setNewFirstName] = useState("");
   const [newLastName, setNewLastName] = useState("");
-  const userToken = useSelector((state) => state.logger.value.token);
+  const userToken = useSelector((state) => state.login.token);
   const storedFirstName = useSelector(
     (state) => state.user.value.userFirstName
   );

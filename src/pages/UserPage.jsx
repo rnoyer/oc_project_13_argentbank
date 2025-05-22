@@ -1,7 +1,18 @@
 import UserHeader from "/src/components/userHeader/UserHeader";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function UserPage() {
-  // AJouter IF non connecter > redirect sur la Home
+  let isLogged = !!useSelector((state) => state.login.token);
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isLogged) {
+      navigate("/");
+    }
+  }, []);
+
   return (
     <main className="main bg-dark">
       <UserHeader />

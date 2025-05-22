@@ -4,7 +4,7 @@ import userReducer from "/src/features/userInfos";
 
 export default configureStore({
   reducer: {
-    logger: loginReducer,
+    login: loginReducer,
     user: userReducer,
   },
 });
